@@ -23,13 +23,12 @@ else:
 def prime(n):
     if n <= 1:
         return False
-    for i in range(2, n // 2 + 1):
-        if n % i == 0:
+    for i in range(2, n // 2 + 1): # range should be 2 to n//2+1
+        if n % i == 0: 
             return False
     return True
 
-#input from user
-num = int(input("Enter a number: "))
+num = int(input("Enter a number: ")) #take input from the user
 
 if prime(num):
     print(f"{num} is a prime number")
