@@ -17,3 +17,21 @@ else:
         print(f"{number} is a prime number")
     else:
         print(f"{number} is not a prime number")
+
+#####  second way #########
+
+def prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n // 2 + 1):
+        if n % i == 0:
+            return False
+    return True
+
+#input from user
+num = int(input("Enter a number: "))
+
+if prime(num):
+    print(f"{num} is a prime number")
+else:
+    print(f"{num} is not a prime number")
