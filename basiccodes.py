@@ -16,4 +16,14 @@ for i in range (n+1):
     
 print(f"sum of squares of {n} natural numbers is {sum}")
     
+############################## sum of cubes of first N natural numbers #######################################################
+
+n = int(input("enter a number: "))
+sum=0 
+
+for i in range (n+1):
+    i = i**3
+    sum = sum+i
+    
+print(f"sum of cubes of first {n} natural numbers is {sum}")
     
