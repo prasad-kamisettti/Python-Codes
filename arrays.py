@@ -1,6 +1,21 @@
-array = list(map(int,input("enter numbers seperated by space: ").split()))
+##################################### Code to find sum of an array #################################################################
 
+array = list(map(int,input("enter numbers seperated by space: ").split()))
 sum=0
 for i in array:
     sum = sum+i  
 print(sum)
+
+
+################################### code to find maximum of an array without using built in function ###############################
+array = list(map(int,input("enter numbers seperated by space: ").split()))
+maximum = array[0]
+n= len(array)
+for i in range (n):
+    if array[i]>maximum:
+        maximum = array[i]
+print(maximum)
+
+##################################### code to find maximum of an array using built in function ######################################
+array = list(map(int,input("enter numbers seperated by space: ").split()))
+print(max(array))
