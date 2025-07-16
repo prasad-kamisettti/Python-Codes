@@ -46,4 +46,14 @@ elif(which_shift=="right"):
     print(f"Array after right rotation by {r} shift is {rotated_array}")
 else:
     print("Invalid Input")
-    
+
+
+##################################### Program for Find remainder of array multiplication divided by n ######################################
+
+array = list(map(int,input("Enter numbers seperated by space: ").split()))
+n = int(input("enter a number: "))
+product = 1
+for i in array:
+           product = product*i
+result = product%n
+print(f"The remainder of array multiplication divided by {n} is {result}")
