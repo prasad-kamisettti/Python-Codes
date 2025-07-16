@@ -1,21 +1,28 @@
 ##################################### Code to find sum of an array #################################################################
 
-array = list(map(int,input("enter numbers seperated by space: ").split()))
-sum=0
-for i in array:
-    sum = sum+i  
-print(sum)
+# array = list(map(int,input("enter numbers seperated by space: ").split()))
+# sum=0
+# for i in array:
+#     sum = sum+i  
+# print(sum)
 
 
 ################################### code to find maximum of an array without using built in function ###############################
-array = list(map(int,input("enter numbers seperated by space: ").split()))
-maximum = array[0]
-n= len(array)
-for i in range (n):
-    if array[i]>maximum:
-        maximum = array[i]
-print(maximum)
+# array = list(map(int,input("enter numbers seperated by space: ").split()))
+# maximum = array[0]
+# n= len(array)
+# for i in range (n):
+#     if array[i]>maximum:
+#         maximum = array[i]
+# print(maximum)
 
 ##################################### code to find maximum of an array using built in function ######################################
+# array = list(map(int,input("enter numbers seperated by space: ").split()))
+# print(max(array))
+
+
+##################################### code to perform array rotation ######################################
 array = list(map(int,input("enter numbers seperated by space: ").split()))
-print(max(array))
+r = int(input("enter a number to perform shift "))
+rotated_array = array[r:]+array[:r]
+print(f"Array after rotation is {rotated_array}")
