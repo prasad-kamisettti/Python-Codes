@@ -1,4 +1,4 @@
-##################################### Code to find sum of an array #################################################################
+# ##################################### Code to find sum of an array #################################################################
 
 array = list(map(int,input("enter numbers seperated by space: ").split()))
 sum=0
@@ -7,7 +7,7 @@ for i in array:
 print(sum)
 
 
-################################### code to find maximum of an array without using built in function ###############################
+# ################################### code to find maximum of an array without using built in function ###############################
 
 array = list(map(int,input("enter numbers seperated by space: ").split()))
 maximum = array[0]
@@ -17,13 +17,13 @@ for i in range (n):
         maximum = array[i]
 print(maximum)
 
-##################################### code to find maximum of an array using built in function ######################################
+# ##################################### code to find maximum of an array using built in function ######################################
 
 array = list(map(int,input("enter numbers seperated by space: ").split()))
 print(max(array))
 
 
-##################################### code to perform array rotation ######################################
+# ##################################### code to perform array rotation ######################################
 
 array = list(map(int,input("enter numbers seperated by space: ").split()))
 r = int(input("enter a number to perform shift "))
@@ -32,7 +32,7 @@ print(f"Array after rotation is {rotated_array}")
 
 
 
-##################################### code to perform left or right array rotation as per user requirements ######################################
+# ##################################### code to perform left or right array rotation as per user requirements ######################################
 
 array = list(map(int,input("Enter numbers seperated by space: ").split()))
 r = int(input("Enter a number to perform shift: "))
@@ -48,7 +48,7 @@ else:
     print("Invalid Input")
 
 
-##################################### Program for Find remainder of array multiplication divided by n ######################################
+# ##################################### Program for Find remainder of array multiplication divided by n ######################################
 
 array = list(map(int,input("Enter numbers seperated by space: ").split()))
 n = int(input("enter a number: "))
@@ -57,3 +57,22 @@ for i in array:
            product = product*i
 result = product%n
 print(f"The remainder of array multiplication divided by {n} is {result}")
+
+###################################### Program for Find monotonnic array or not ######################################
+def is_monotonic(array):
+    inc = True
+    dec = True
+
+    for i in range(len(array) - 1):
+        if array[i] < array[i + 1]:
+            dec = False
+        elif array[i] > array[i + 1]:
+            inc = False
+
+    return inc or dec
+
+array = list(map(int, input("Enter numbers separated by space: ").split()))
+if is_monotonic(array):
+    print("The array is monotonic.")
+else:
+    print("The array is not monotonic.")
