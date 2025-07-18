@@ -23,3 +23,10 @@ multi = 1
 for val in my_list:
     multi = multi*val
 print(multi)
+
+
+#################################### program to find multiply all numbers in list using built-in functions #############################################################
+import math
+my_list = list(map(int, input("Enter a numbers seperated by space: ").split()))
+result = math.prod(my_list)
+print(result)
