@@ -35,5 +35,5 @@ print(result)
 my_list = list(map(int, input("Enter a numbers seperated by space: ").split()))
 multi = 0
 for val in my_list:
-    multi = multi+val
+    multi = multi+val   ## or you can directly find by using built in function in python called "sum"
 print(multi)
