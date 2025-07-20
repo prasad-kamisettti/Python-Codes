@@ -30,3 +30,10 @@ import math
 my_list = list(map(int, input("Enter a numbers seperated by space: ").split()))
 result = math.prod(my_list)
 print(result)
+
+#################################### program to find sum of all numbers in list  #############################################################
+my_list = list(map(int, input("Enter a numbers seperated by space: ").split()))
+multi = 0
+for val in my_list:
+    multi = multi+val
+print(multi)
