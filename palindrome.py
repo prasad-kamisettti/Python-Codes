@@ -21,3 +21,16 @@ while left < right:
     break
 print("palindrome")
         
+# Get input from the user
+string = input("Enter a string: ")
+
+# Reverse the string manually
+reversed_string = ""
+for char in string:
+    reversed_string = char + reversed_string  
+
+# Compare original and reversed
+if string == reversed_string:
+    print("Yes, it's a palindrome.")
+else:
+    print("No, it's not a palindrome.")
