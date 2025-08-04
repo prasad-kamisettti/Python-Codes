@@ -1,3 +1,32 @@
+
+# function find string greater than length k
+
+
+def string_k(k, str):
+
+    string = []
+    text = str.split(" ")
+    for x in text:
+        if len(x) > k:
+
+            string.append(x)
+    return string
+
+
+k = 3
+str = input("enter a string: ")
+print(string_k(k, str))
+
+
+
+
+
+
+
+
+
+
+
 radius = int(input("enter the radius of a circle: "))
 pi = 3.14
 # formulae to find area of circle
