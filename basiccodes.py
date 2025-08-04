@@ -13,7 +13,7 @@ def string_k(k, str):
     return string
 
 
-k = 3
+k = int(input("enter a number: "))
 str = input("enter a string: ")
 print(string_k(k, str))
 
