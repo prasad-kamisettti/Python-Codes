@@ -22,11 +22,9 @@ else:
     else:
         result = "Error! Invalid operator."
 
-    # 3. Display the result
-    print("--------------------")
+    #Display the result
     # We only print the full equation if the operator was valid
     if isinstance(result, (int, float)):
-        print(f"Result: {num1} {operation} {num2} = {result}")
+        print(f"\n Result: {num1} {operation} {num2} = {result}\n")
     else:
         print(result)
-    print("--------------------")
