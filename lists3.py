@@ -15,24 +15,26 @@
 # got a refund of 200$. Make a correction to your monthly expense list
 # based on this
 
+# expense = ["January 2200", "feb 2350", "march 2600", "april 2130", "may 2190"]
+# print(expense)
+
+
+# print(int(expense[1].split()[1]) - int(expense[0].split()[1]))
+
+# print(int(expense[0].split()[1]) + int(expense[1].split()[1]) + int(expense[3].split()[1])) 
+
+# print(2000 in [int(item.split()[1]) for item in expense])
+
+# expense.insert(5, "June: 1980") 
+# print(expense)
+
 expense = ["January 2200", "feb 2350", "march 2600", "april 2130", "may 2190"]
+
+for i in range (len(expense)):
+    if expense[i].startswith("april"):
+        amt = int(expense[i].split()[1]) - 200
+        expense[i]= f"april {amt}"
 print(expense)
-
-
-print(int(expense[1].split()[1]) - int(expense[0].split()[1]))
-
-print(int(expense[0].split()[1]) + int(expense[1].split()[1]) + int(expense[3].split()[1])) 
-
-print(2000 in [int(item.split()[1]) for item in expense])
-
-expense.insert(5, "June: 1980") 
-print(expense)
-
-expense = ["January 2200", "feb 2350", "march 2600", "april 2130", "may 2190"]
-
-
-
-
 
 
 
