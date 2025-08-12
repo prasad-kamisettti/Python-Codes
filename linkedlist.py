@@ -9,11 +9,13 @@ class LinkedList:
 
 
 #data inserting
+    
     def inset_at_begin(self,data):
         node=Node(data,self.head)
         self.head=node
     
-    #printing liked list    
+#printing liked list    
+    
     def print(self):
         if self.head is None:
             print("Linked list is empty")
@@ -27,7 +29,7 @@ class LinkedList:
             itr=itr.next
         print(llstr)
         
-        #Inserting at the end
+#Inserting at the end
         
     def insert_at_end(self, data):
         if self.head is None:  ## check if list is empty. if it is empty add new node and sets its next pointer to none as it is only element
@@ -39,14 +41,27 @@ class LinkedList:
             
         itr.next=Node(data,None)
      
-     ##created a function that will take the values    
+##created a function that will take the values    
+
     def insert_values(self, data_list):
         self.head = None ## making sure to restting the linked list 
         for data in data_list:
             self.insert_at_end(data)
+    
+
+## function to find length of a linked list
+    
+    def ll_length(self):
+        counter=0
+        itr = self.head
+        while itr:
+            counter=counter+1
+            itr=itr.next
+        return counter
                         
         
 if __name__=='__main__':
     ll = LinkedList()
     ll.insert_values(["banana", "mango", "grapes", "oranges"])
     ll.print()
+    print("length:" ,ll.ll_length())
