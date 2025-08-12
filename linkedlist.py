@@ -38,12 +38,15 @@ class LinkedList:
             itr = itr.next
             
         itr.next=Node(data,None)
-            
+     
+     ##created a function that will take the values    
+    def insert_values(self, data_list):
+        self.head = None ## making sure to restting the linked list 
+        for data in data_list:
+            self.insert_at_end(data)
+                        
         
 if __name__=='__main__':
     ll = LinkedList()
-    ll.inset_at_begin(10)
-    ll.inset_at_begin(78)
-    ll.insert_at_end(9)
-    ll.insert_at_end(108)
+    ll.insert_values(["banana", "mango", "grapes", "oranges"])
     ll.print()
