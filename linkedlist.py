@@ -27,8 +27,23 @@ class LinkedList:
             itr=itr.next
         print(llstr)
         
+        #Inserting at the end
+        
+    def insert_at_end(self, data):
+        if self.head is None:  ## check if list is empty. if it is empty add new node and sets its next pointer to none as it is only element
+            self.head = Node(data,None)
+        
+        itr=self.head       
+        while itr.next:
+            itr = itr.next
+            
+        itr.next=Node(data,None)
+            
+        
 if __name__=='__main__':
     ll = LinkedList()
     ll.inset_at_begin(10)
     ll.inset_at_begin(78)
+    ll.insert_at_end(9)
+    ll.insert_at_end(108)
     ll.print()
