@@ -58,10 +58,30 @@ class LinkedList:
             counter=counter+1
             itr=itr.next
         return counter
-                        
+    
+## function to remove element from linked list at a given index
+
+    def remove(self, index):
+        if index<0  or index > self.ll_length():
+            raise Exception("Invalid Index")
+        if index == 0:
+            self.head = self.head.next
+            return
         
+        count = 0 
+        itr = self.head
+        
+        while itr:
+            if count == index-1:
+                itr.next = itr.next.next
+                break
+            itr = itr.next                      
+            count = count+1
+                    
 if __name__=='__main__':
     ll = LinkedList()
     ll.insert_values(["banana", "mango", "grapes", "oranges"])
+    ll.print()
+    ll.remove(3)
     ll.print()
     print("length:" ,ll.ll_length())
