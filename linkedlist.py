@@ -77,15 +77,21 @@ class LinkedList:
                 break
             itr = itr.next                      
             count = count+1
+   
+   ### function to insert a value node 
             
     def insert_after_value(self, data_after, data_to_insert):
         
-        if self.head is None:
+        #if head is NULL 
+        if self.head is None: 
             return
+        
+        #if the value  which we want to insert after_data is head (1st position) then
         if self.head.data == data_after:
             self.head.next = Node(data_to_insert, self.head.next)
             return
         
+        ## if not initialize iterator 
         itr = self.head
         while itr:
            if itr.data == data_after:
