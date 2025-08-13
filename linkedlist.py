@@ -100,10 +100,8 @@ class LinkedList:
            itr=itr.next
             
         
-        
-    
-    
-    
+##function to remove by value:
+
     def remove_by_value(self, data):
         
         if self.head is None: ## if list is empty 
